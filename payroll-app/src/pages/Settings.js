@@ -6,7 +6,7 @@ const Settings = () => {
   return (
     <div>
       <h2>Settings</h2>
-      <p>Configure your payroll settings here.</p>
+      <p>Application settings go here.</p>
     </div>
   );
 };

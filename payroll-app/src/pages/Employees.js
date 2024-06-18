@@ -1,20 +1,12 @@
 // src/pages/Employees.js
 
-import React, { useState } from 'react';
-import EmployeeList from '../components/EmployeeList';
+import React from 'react';
 
 const Employees = () => {
-  // Mock employee data
-  const [employees] = useState([
-    { id: 1, name: 'John Doe' },
-    { id: 2, name: 'Jane Smith' },
-    { id: 3, name: 'Michael Johnson' },
-  ]);
-
   return (
     <div>
       <h2>Employees</h2>
-      <EmployeeList employees={employees} />
+      <p>List of employees goes here.</p>
     </div>
   );
 };

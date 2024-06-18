@@ -1,31 +1,7 @@
 /* src/App.css */
 
-/* Reset default margins and padding */
-body, h1, h2, h3, h4, h5, h6, p, ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Basic styles for the whole application */
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  height: 100vh;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 20px;
+  text-align: center;
 }
 
 .App-logo {
@@ -33,23 +9,32 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
   pointer-events: none;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-content {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   justify-content: flex-start;
-  flex: 1;
-  width: 100%;
+  align-items: flex-start;
+}
+
+.Navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
 .Sidebar {
-  background-color: #333;
-  color: white;
   width: 200px;
+  background-color: #f0f0f0;
   padding: 20px;
 }
 
@@ -63,66 +48,36 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .Sidebar a {
-  color: white;
   text-decoration: none;
+  color: #333;
 }
 
-main {
-  flex: 1;
-  padding: 20px;
+.Sidebar a:hover {
+  text-decoration: underline;
 }
+/* src/App.css */
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  margin: auto;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="password"] {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+.Navbar {
+  background-color: #333;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
+  padding: 10px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.Navbar ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-p {
-  margin-bottom: 10px;
+.Navbar li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .App-content {
-    flex-direction: column;
-    align-items: center;
-  }
+.Navbar a {
+  text-decoration: none;
+  color: white;
+}
 
-  .Sidebar {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  main {
-    width: 100%;
-    padding: 0 10px;
-  }
+.Navbar a:hover {
+  text-decoration: underline;
 }

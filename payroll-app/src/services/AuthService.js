@@ -1,32 +1,24 @@
 // src/services/AuthService.js
 
-let currentUser = null;
+const users = [
+  { username: 'admin', password: 'admin' },
+  { username: 'manager', password: 'manager' },
+  { username: 'employee', password: 'employee' },
+];
 
-const signInWithEmailAndPassword = (email, password) => {
-  // Simulating login, replace with actual authentication logic
-  if (email === 'admin@example.com' && password === 'password') {
-    currentUser = {
-      email: 'admin@example.com',
-      role: 'admin',
-    };
-    return Promise.resolve(currentUser);
-  } else {
-    return Promise.reject(new Error('Invalid credentials'));
+export const login = (username, password) => {
+  const user = users.find(user => user.username === username && user.password === password);
+  if (user) {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    return user;
   }
+  return null;
 };
 
-const signOut = () => {
-  // Simulating logout
-  currentUser = null;
-  return Promise.resolve();
+export const getCurrentUser = () => {
+  return JSON.parse(localStorage.getItem('currentUser'));
 };
 
-const getCurrentUser = () => {
-  return currentUser;
-};
-
-export {
-  signInWithEmailAndPassword,
-  signOut,
-  getCurrentUser,
+export const signOut = () => {
+  localStorage.removeItem('currentUser');
 };
